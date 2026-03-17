@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sorry Madam Ji ❤️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        overflow: hidden;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 0 40px rgba(255, 0, 150, 0.3);
+        animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+        color: #ff4da6;
+    }
+
+    p {
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+    .btn {
+        margin-top: 25px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        background: linear-gradient(45deg, #ff4da6, #ff1a75);
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #ff4da6;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+        position: absolute;
+        color: #ff4da6;
+        animation: float 5s infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(100vh); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-10vh); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Sorry Madam Ji 😔</h1>
+    <p>Kal ek important cheez reh gayi thi…</p>
+    <p><b>I love you bolna 😞</b></p>
+    <p>But sach me…</p>
+    <h2 style="color:#ff80bf;">I LOVE YOU ❤️</h2>
+    <p>Ab gussa mat ho na… please 🥺</p>
+
+    <button class="btn" onclick="forgive()">Maaf Kar Do ❤️</button>
+</div>
+
+<script>
+function forgive() {
+    alert("Yayyy 😍 Madam ji maan gayi 💖");
+}
+
+// floating hearts
+for (let i = 0; i < 20; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
